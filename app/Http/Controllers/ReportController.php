@@ -113,7 +113,11 @@ class ReportController extends Controller
     public function track(Request $request)
     {
         $ticketId = $request->input('ticket_id');
-        $reportTrackers = ReportTracker::with('report')->orderByDesc('updated_at')->get();
+        $reportTrackers = ReportTracker::whereHas('report', function ($query) use ($ticketId) {
+            $query->where('ticket_id', $ticketId);
+        })
+        ->orderByDesc('updated_at')
+        ->get();
 
         return view('reports.track', ['reportTrackers' => $reportTrackers, 'ticketId' => $ticketId]);
     }
