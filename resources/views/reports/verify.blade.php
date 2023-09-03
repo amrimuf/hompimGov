@@ -26,6 +26,8 @@
                         <li><strong>Ticket ID:</strong> {{ $report->ticket_id }}</li>
                         <li><strong>Judul:</strong> {{ $report->title }}</li>
                         <li><strong>Deskripsi:</strong> {{ $report->description }}</li>
+                        <li><strong>Status:</strong> {{ $report->status }}</li>
+                        {{-- <li><strong>Kategori:</strong> {{ $report->category->name }}</li> --}}
                     </ul>
                     <div class="row">
                         <div class="col-md-6">
@@ -37,11 +39,11 @@
                                 <div class="form-group">
                                     <label for="status">Status</label>
                                     <select class="form-control" id="status" name="status">
-                                        <option value="Pending">Pending</option>
-                                        <option value="Proses Administratif">Proses Administratif</option>
-                                        <option value="Proses Penanganan">Proses Penanganan</option>
-                                        <option value="Selesai Ditangani">Selesai Ditangani</option>
-                                        <option value="Laporan Ditolak">Laporan Ditolak</option>
+                                        <option value="Pending" @if($report->status === 'Pending') selected @endif>Pending</option>
+                                        <option value="Proses Administratif" @if($report->status === 'Proses Administratif') selected @endif>Proses Administratif</option>
+                                        <option value="Proses Penanganan" @if($report->status === 'Proses Penanganan') selected @endif>Proses Penanganan</option>
+                                        <option value="Selesai Ditangani" @if($report->status === 'Selesai Ditangani') selected @endif>Selesai Ditangani</option>
+                                        <option value="Laporan Ditolak" @if($report->status === 'Laporan Ditolak') selected @endif>Laporan Ditolak</option>
                                     </select>
                                 </div>
                 
@@ -49,7 +51,7 @@
                                     <label for="category">Kategori</label>
                                     <select class="form-control" id="category" name="category">
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            <option value="{{ $category->id }}" @if($report->category_id === $category->id) selected @endif>{{ $category->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>

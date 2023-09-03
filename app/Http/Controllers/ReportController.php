@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-
-use Illuminate\Http\Request;
+use App\DataTables\ReportsDataTable;
 use App\Http\Requests\ReportRequest;
-use App\Models\Report;
-use App\Models\Reporter;
 use App\Models\Category;
+use App\Models\Report;
 use App\Models\ReportTracker;
-use Illuminate\Support\Facades\DB;
+use App\Models\Reporter;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
+use Spatie\Activitylog\Models\Activity;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Services\DataTable;
-use Spatie\Activitylog\Models\Activity;
-use RealRashid\SweetAlert\Facades\Alert;
-
-use App\DataTables\ReportsDataTable;
 
 class ReportController extends Controller
 {

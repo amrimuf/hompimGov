@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('ticket_id', 255);
             $table->string('title', 255);
             $table->longText('description');
-            $table->string('status', 255)->default('pending');
+            $table->string('status', 255)->default('Pending');
             $table->timestamps();
             $table->foreign('reporter_id')->references('id')->on('reporters');
             $table->foreign('category_id')->references('id')->on('categories');
