@@ -83,7 +83,7 @@ class ReportsDataTable extends DataTable
         return [
             Column::make('ticket_id'),
             Column::make('title'),
-            Column::make('description'),
+            Column::make('description')->width(300),
             Column::make('created_at'),
             Column::make('updated_at'),
             Column::computed('reporter_name')
