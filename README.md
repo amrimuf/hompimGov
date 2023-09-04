@@ -22,7 +22,7 @@ LaporCak! is a web application for reporting and tracking issues or incidents. I
 
 ## Technologies Used
 
-- [**Laravel 8.1:**](https://laravel.com/docs/10.x) A PHP web application framework for building robust web applications.
+- [**Laravel 10.10:**](https://laravel.com/docs/10.x) A PHP web application framework for building robust web applications.
 - [**Bootstrap 5.2.3:**](https://getbootstrap.com/docs/5.2) A popular CSS framework for responsive web design.
 - [**Vite 4.0.0:**](https://vitejs.dev/guide/) A build tool for modern web development.
 - [**Spatie Media Library 10.11:**](https://spatie.be/docs/laravel-medialibrary/v10/introduction) A package for managing file uploads and media.
