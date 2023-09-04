@@ -46,8 +46,9 @@ LaporCak! is a web application for reporting and tracking issues or incidents. I
 5. Generate an application key: `php artisan key:generate`
 6. Set up your database connection in the `.env` file
 7. Run database migrations and seeders: `php artisan migrate --seed`
-8. Compile your assets: `npm run dev`
-9. Start the development server: `php artisan serve`
+8. Create a symbolic link: `php artisan storage:link`
+9. Compile your assets: `npm run dev`
+10. Start the development server: `php artisan serve`
 
 ## Contributing
 
