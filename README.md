@@ -37,8 +37,8 @@ HompimGov is a web application for reporting and tracking issues or incidents. I
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/amrimuf/lapor-cak.git
-   cd lapor-cak
+   git clone https://github.com/amrimuf/hompimGov.git
+   cd hompimGov
    ```
 2. Install PHP dependencies: `composer install`
 3. Install JavaScript dependencies: `npm install`
@@ -46,7 +46,7 @@ HompimGov is a web application for reporting and tracking issues or incidents. I
 5. Generate an application key: `php artisan key:generate`
 6. Set up your database connection in the `.env` file
 7. Run database migrations and seeders: `php artisan migrate --seed`
-8. Create a symbolic link: `php artisan storage:link`
+8. Create a symbolic link: `php artisan storage:link`. This command creates a symbolic link in the public directory of the application that points to the storage/app/public directory.
 9. Compile your assets: `npm run dev`
 10. Start the development server: `php artisan serve`
 
