@@ -26,5 +26,22 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+
+        $this->renderable(function (\Illuminate\Auth\AuthenticationException $e, $request) {
+            if ($request->is('api/*')) {
+                return response()->json([
+                    'message' => 'Not authenticated'
+                ], 401);
+            }
+        });
+
+        $this->renderable(function (\Exception $e, $request) {
+            if ($request->is('api/auth/logout')) {
+                return response()->json([
+                    'message' => 'Logout failed',
+                    'error' => config('app.debug') ? $e->getMessage() : 'Internal server error'
+                ], 500);
+            }
+        });
     }
 }
