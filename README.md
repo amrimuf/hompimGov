@@ -1,10 +1,10 @@
-# LaporCak! 📢
+# HompimGov 📢
 
-LaporCak! is a web application for reporting and tracking issues or incidents. It allows users to submit reports, track the status of their reports, and view the history of each report.
+HompimGov is a web application for reporting and tracking issues or incidents. It allows users to submit reports, track the status of their reports, and view the history of each report.
 
 ## Table of Contents
 
-- [LaporCak! 📢](#laporcak-)
+- [HompimGov 📢](#hompimgov-)
   - [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Technologies Used](#technologies-used)
